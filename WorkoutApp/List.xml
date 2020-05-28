@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workouts> 
+	<workout>
+		<excercise name="Bench Press">Bench Press</excercise>
+		<excercise name="Chest Fly"></excercise>
+		<excercise name="Perfect Pushups"></excercise>
+		<excercise name="Pushups"></excercise>
+	</workout>
+			
+	<workout>
+		<excercise name="Bar Row"></excercise>
+		<excercise name="Deadlift"></excercise>
+		<excercise name="Pull-up"></excercise>
+		<excercise name="Reverse Fly"></excercise>
+	</workout>
+	
+	<workout>
+		<excercise name="Front-Squat"></excercise>
+		<excercise name="Lunge"></excercise>
+		<excercise name="Calf Raise"></excercise>
+		<excercise name="Back Squat"></excercise>
+	</workout>
+	
+	<workout>
+		<excercise name="Plank"></excercise>
+		<excercise name="Crunches"></excercise>
+		<excercise name="Leg Extensions"></excercise>
+		<excercise name="Heavy Bag"></excercise>
+		<excercise name="Battle Rope"></excercise>
+		<excercise name="Shoulder Fly"></excercise>
+	</workout>
+
+</workouts>

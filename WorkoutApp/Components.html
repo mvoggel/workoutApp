@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Components Page</title>
+	<link href="../css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="css/Workout.css" rel="stylesheet" type="text/css">
+	
+</head>
+	
+<body>
+	
+<div class="mobile-container">
+
+<!-- Navigation  -->
+<div class="topnav"  id="nav-bar">
+  <a href="./Components.html" class="active"><img src="./img/logo.png" width="25" height="25" alt="Logo for this workout app."/> Work.</a>
+  <div id="myLinks">
+    <a href="./Chest-day.html">Chest Day</a>
+    <a href="./Back-day.html">Back Day</a>
+    <a href="./Leg-day.html">Leg Day</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<!--Workouts -->
+<div style="padding: 25px">
+  <h3>Workout Day</h3>
+
+
+<div class="all-workout-options">
+<div class="chest-workouts"> Chest Workouts
+	<ul> 
+		<li id="benchpress"> Bench Press </li>
+			<form>
+				Weight: 
+				<input type="number" id="bench-weight"
+       			min="75" max="265">
+				Reps: 
+				<input type="number" id="bench-reps"
+       			min="1" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<button onclick="">Save</button>	
+			</form>
+			<br>
+		
+		<li> Chest Fly </li>
+			<form>
+				Weight: 
+				<input type="number" id="fly-weight"
+       			min="15" max="55">
+				Reps: 
+				<input type="number" id="fly-reps"
+       			min="1" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<input type="button" value="Save" id="submit"> 	
+			</form>
+			<br>		
+		<li> Pushups </li>
+		<li> Perfect Pushups </li>
+		<li> Dumbbell Press </li>
+	</ul>
+</div>
+	
+<div class="back-workouts"> Back Workouts
+	<ul> 
+		<li>Bench Press </li>
+		<li> Chest Fly </li>
+		<li> Pushups </li>
+		<li> Perfect Pushups </li>
+		<li> Dumbbell Press </li>
+	</ul>
+</div>
+
+<div class="leg-workouts"> Leg Workouts
+	<ul> 
+		<li>Bench Press </li>
+		<li> Chest Fly </li>
+		<li> Pushups </li>
+		<li> Perfect Pushups </li>
+		<li> Dumbbell Press </li>
+	</ul>
+</div>
+
+<div class="full-body-workouts"> Full Body Workouts
+	<ul> 
+		<li>Bench Press </li>
+		<li> Chest Fly </li>
+		<li> Pushups </li>
+		<li> Perfect Pushups </li>
+		<li> Dumbbell Press </li>
+	</ul>
+</div>
+	
+<div class="ab-workouts"> Ab Workouts
+	<ul> 
+		<li>Bench Press </li>
+		<li> Chest Fly </li>
+		<li> Pushups </li>
+		<li> Perfect Pushups </li>
+		<li> Dumbbell Press </li>
+	</ul>
+</div>	
+
+</div>	
+  </div>
+	
+<!-- Add Workout Button --> 
+<div class="new-exercise-button">
+<a href="#"><img class="exercise-button" src="./img/Add Excercise.png" width="80" height="80" alt="Click to add an excercise."/> </a>
+</div>
+	
+
+	
+</div>
+
+	
+<button type="button" id= "pickworkout" onclick="loadDoc()"><img class="exercise-button" src="./img/Add Excercise.png" width="80" height="80" alt="Click to add an excercise."/></button>
+<br><br>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      loadDoc(this);
+    }
+  };
+  xhttp.open("GET", "List.xml", true);
+  xhttp.send();
+}
+function loadDoc(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="";
+  var x = xmlDoc.getElementsByTagName("workout");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("excercise")[0].childNodes[0].nodeValue +
+    "</td><td>" ;
+  }
+  document.getElementById("pickworkout").innerHTML = x;
+}	
+</script>	
+	
+
+	
+	
+	
+
+	
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap-4.2.1.js"></script>
+<script src="./WorkoutApp/WA-JS.js"></script>
+</body>
+</html>

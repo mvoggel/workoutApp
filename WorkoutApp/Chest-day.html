@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout App</title>
+<link href="./css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+<link href="./css/Workout.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="mobile-container">
+	<!-- Top Navigation Menu -->
+
+<div class="topnav">
+  <a href="Components.html" class="active"><img src="./img/logo.png" width="25" height="25" alt="Logo for this workout app."/>Work.</a>
+  <div id="myLinks">
+    <a href="../Chest-day.html">Chest Day</a>
+    <a href="../Back-day.html">Back Day</a>
+    <a href="../Leg-day.html">Leg Day</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="main-chest-content" style="padding: 0 20px">
+	<h2> This is chest day.</h2>
+	<h4> Weeks 1-3 Workouts</h4>
+	
+		<p>Add a new workout by clicking the plus sign below. Or check off a workout you've currently done.</p> 
+	
+	
+	
+<div class="chest-workouts"> Chest Workouts
+	<ul> 
+	<li> Bench Press 
+		<form id="benchpress">
+
+			<p class="Weight">Weight:</p><input type="number" id="bench-weight" min="75" max="265">
+				<br>
+			<p class="Reps">Reps:</p> 
+			<input type="number" id="bench-reps" min="1" max="50">
+				<br> 
+			<!--Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3 -->
+				<br>	
+			
+			  </form></li>
+  				<input type="submit" onclick="showInput();"><br/>
+		
+		<p><span id="display"></span></p>
+	
+				
+		
+		
+		
+		
+		<br>
+		<li> Chest Fly </li>
+		<form>
+				Weight: 
+				<input type="number" id="fly-weight"
+       			min="15" max="55">
+				Reps: 
+				<input type="number" id="fly-reps"
+       			min="1" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<input type="button" value="Save" id="submit"> 	
+			</form>
+				<br>		
+		<li> Pushups </li>
+		<form>
+				Number of Pushups 
+				<input type="number" id="pushups"
+       			min="10" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<input type="button" value="Save"> 	
+			</form>
+				<br>
+		<li> Perfect Pushups </li>
+		<form>
+				Number of Pushups 
+				<input type="number" id="perfect-pushups"
+       			min="10" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<input type="button" value="Save"> 	
+			</form>
+				<br>
+		<li> Dumbbell Press </li>
+		<form>
+				Weight: 
+				<input type="number" id="press-weight"
+       			min="15" max="55">
+				Reps: 
+				<input type="number" id="press-reps"
+       			min="1" max="50">
+				<br> Completions: 
+				<input type="checkbox">1
+				<input type="checkbox">2
+				<input type="checkbox">3
+				<br>
+				<input type="button" value="Save"> 	
+			</form>
+				<br>
+	</ul>
+</div>
+		<div class="new-exercise-button">
+<a href="#"><img class="exercise-button" src="./img/Add Excercise.png" width="80" height="80" alt="Click to add an excercise."/> </a>
+	</div>
+	
+</div>
+	</div>
+	
+
+	
+	
+	<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script src="./WA-JS.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap-4.2.1.js"></script>
+	</body>
+</html>
